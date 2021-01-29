@@ -1,0 +1,21 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Folder Include="CrossCutting\Interfaces\" />
+    <Folder Include="CrossCutting\IoC\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="3.1.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\ModeloDDD.Application\ModeloDDD.Application.csproj" />
+    <ProjectReference Include="..\ModeloDDD.Domain.Core\ModeloDDD.Domain.Core.csproj" />
+    <ProjectReference Include="..\ModeloDDD.Domain\ModeloDDD.Domain.csproj" />
+  </ItemGroup>
+</Project> 
