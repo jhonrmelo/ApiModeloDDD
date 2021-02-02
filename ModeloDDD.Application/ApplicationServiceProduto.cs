@@ -3,10 +3,9 @@ using ModeloDDD.Application.Interfaces;
 using ModeloDDD.Application.Interfaces.Mappers;
 using ModeloDDD.Domain.Core.Interfaces.Services;
 using ModeloDDD.Domain.Entities;
+using ModeloDDD.Application.Exceptions;
 
-using System;
 using System.Collections.Generic;
-using System.Text;
 
 namespace ModeloDDD.Application
 {
@@ -39,9 +38,13 @@ namespace ModeloDDD.Application
             return _mapperProduto.MapperEntityToDto(produto);
         }
 
-        public void Remove(ProdutoDTO ProdutoDTO)
+        public void Remove(int id)
         {
-            Produto produto = _mapperProduto.MapperDtoToEntity(ProdutoDTO);
+            Produto produto = _serviceProduto.GetById(id);
+
+            if (produto is null)
+                throw new NotFoundException("Produto não encontrado");
+
             _serviceProduto.Remove(produto);
         }
 

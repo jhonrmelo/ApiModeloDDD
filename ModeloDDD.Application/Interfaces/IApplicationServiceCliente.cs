@@ -10,7 +10,7 @@ namespace ModeloDDD.Application.Interfaces
 
         void Update(ClienteDTO clienteDTO);
 
-        void Remove(ClienteDTO clienteDTO);
+        void Remove(int id);
 
         IEnumerable<ClienteDTO> GetAll();
 

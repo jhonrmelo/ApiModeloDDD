@@ -8,7 +8,6 @@ D:\Projects\ApiRestComDDD\ApiModeloDDD\ModeloDDD.Infra\bin\Debug\netcoreapp3.1\M
 D:\Projects\ApiRestComDDD\ApiModeloDDD\ModeloDDD.Infra\bin\Debug\netcoreapp3.1\ModeloDDD.Domain.dll
 D:\Projects\ApiRestComDDD\ApiModeloDDD\ModeloDDD.Infra\bin\Debug\netcoreapp3.1\ModeloDDD.Domain.Core.pdb
 D:\Projects\ApiRestComDDD\ApiModeloDDD\ModeloDDD.Infra\bin\Debug\netcoreapp3.1\ModeloDDD.Domain.pdb
-D:\Projects\ApiRestComDDD\ApiModeloDDD\ModeloDDD.Infra\obj\Debug\netcoreapp3.1\ModeloDDD.Infra.csproj.CoreCompileInputs.cache
 D:\Projects\ApiRestComDDD\ApiModeloDDD\ModeloDDD.Infra\obj\Debug\netcoreapp3.1\ModeloDDD.Infra.csproj.CopyComplete
 D:\Projects\ApiRestComDDD\ApiModeloDDD\ModeloDDD.Infra\obj\Debug\netcoreapp3.1\ModeloDDD.Infra.dll
 D:\Projects\ApiRestComDDD\ApiModeloDDD\ModeloDDD.Infra\obj\Debug\netcoreapp3.1\ModeloDDD.Infra.pdb
@@ -16,3 +15,4 @@ D:\Projects\ApiRestComDDD\ApiModeloDDD\ModeloDDD.Infra\bin\Debug\netcoreapp3.1\M
 D:\Projects\ApiRestComDDD\ApiModeloDDD\ModeloDDD.Infra\bin\Debug\netcoreapp3.1\ModeloDDD.Domain.Services.dll
 D:\Projects\ApiRestComDDD\ApiModeloDDD\ModeloDDD.Infra\bin\Debug\netcoreapp3.1\ModeloDDD.Application.pdb
 D:\Projects\ApiRestComDDD\ApiModeloDDD\ModeloDDD.Infra\bin\Debug\netcoreapp3.1\ModeloDDD.Domain.Services.pdb
+D:\Projects\ApiRestComDDD\ApiModeloDDD\ModeloDDD.Infra\obj\Debug\netcoreapp3.1\ModeloDDD.Infra.csproj.CoreCompileInputs.cache

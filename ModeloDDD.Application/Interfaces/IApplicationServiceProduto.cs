@@ -1,8 +1,6 @@
 ﻿using ModeloDDD.Application.DTO;
 
-using System;
 using System.Collections.Generic;
-using System.Text;
 
 namespace ModeloDDD.Application.Interfaces
 {
@@ -12,7 +10,7 @@ namespace ModeloDDD.Application.Interfaces
 
         void Update(ProdutoDTO ProdutoDTO);
 
-        void Remove(ProdutoDTO ProdutoDTO);
+        void Remove(int id);
 
         IEnumerable<ProdutoDTO> GetAll();
 

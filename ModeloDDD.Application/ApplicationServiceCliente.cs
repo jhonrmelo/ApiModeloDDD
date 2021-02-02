@@ -1,8 +1,10 @@
 ﻿using ModeloDDD.Application.DTO;
+using ModeloDDD.Application.Exceptions;
 using ModeloDDD.Application.Interfaces;
 using ModeloDDD.Application.Interfaces.Mappers;
 using ModeloDDD.Domain.Core.Interfaces.Services;
 using ModeloDDD.Domain.Entities;
+
 using System.Collections.Generic;
 
 namespace ModeloDDD.Application
@@ -36,9 +38,13 @@ namespace ModeloDDD.Application
             return _mapperCliente.MapperEntityToDto(cliente);
         }
 
-        public void Remove(ClienteDTO clienteDTO)
+        public void Remove(int id)
         {
-            Cliente cliente = _mapperCliente.MapperDtoToEntity(clienteDTO);
+            Cliente cliente = _serviceCliente.GetById(id);
+
+            if (cliente is null)
+                throw new NotFoundException("A informação passada para a deleção não existe no banco de dados.");
+
             _serviceCliente.Remove(cliente);
         }
 

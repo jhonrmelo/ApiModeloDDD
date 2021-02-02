@@ -6,3 +6,4 @@ D:\Projects\ApiRestComDDD\ApiModeloDDD\ModeloDDD.Domain\obj\Debug\netcoreapp3.1\
 D:\Projects\ApiRestComDDD\ApiModeloDDD\ModeloDDD.Domain\obj\Debug\netcoreapp3.1\ModeloDDD.Domain.csproj.CoreCompileInputs.cache
 D:\Projects\ApiRestComDDD\ApiModeloDDD\ModeloDDD.Domain\obj\Debug\netcoreapp3.1\ModeloDDD.Domain.dll
 D:\Projects\ApiRestComDDD\ApiModeloDDD\ModeloDDD.Domain\obj\Debug\netcoreapp3.1\ModeloDDD.Domain.pdb
+D:\Projects\ApiRestComDDD\ApiModeloDDD\ModeloDDD.Domain\obj\Debug\netcoreapp3.1\ModeloDDD.Domain.csprojAssemblyReference.cache
