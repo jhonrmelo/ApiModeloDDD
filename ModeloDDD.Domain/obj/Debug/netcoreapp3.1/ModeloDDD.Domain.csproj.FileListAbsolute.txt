@@ -1,9 +1,0 @@
-D:\Projects\ApiRestComDDD\ApiModeloDDD\ModeloDDD.Domain\bin\Debug\netcoreapp3.1\ModeloDDD.Domain.deps.json
-D:\Projects\ApiRestComDDD\ApiModeloDDD\ModeloDDD.Domain\bin\Debug\netcoreapp3.1\ModeloDDD.Domain.dll
-D:\Projects\ApiRestComDDD\ApiModeloDDD\ModeloDDD.Domain\bin\Debug\netcoreapp3.1\ModeloDDD.Domain.pdb
-D:\Projects\ApiRestComDDD\ApiModeloDDD\ModeloDDD.Domain\obj\Debug\netcoreapp3.1\ModeloDDD.Domain.AssemblyInfoInputs.cache
-D:\Projects\ApiRestComDDD\ApiModeloDDD\ModeloDDD.Domain\obj\Debug\netcoreapp3.1\ModeloDDD.Domain.AssemblyInfo.cs
-D:\Projects\ApiRestComDDD\ApiModeloDDD\ModeloDDD.Domain\obj\Debug\netcoreapp3.1\ModeloDDD.Domain.csproj.CoreCompileInputs.cache
-D:\Projects\ApiRestComDDD\ApiModeloDDD\ModeloDDD.Domain\obj\Debug\netcoreapp3.1\ModeloDDD.Domain.dll
-D:\Projects\ApiRestComDDD\ApiModeloDDD\ModeloDDD.Domain\obj\Debug\netcoreapp3.1\ModeloDDD.Domain.pdb
-D:\Projects\ApiRestComDDD\ApiModeloDDD\ModeloDDD.Domain\obj\Debug\netcoreapp3.1\ModeloDDD.Domain.csprojAssemblyReference.cache
