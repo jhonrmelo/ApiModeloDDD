@@ -8,6 +8,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.OpenApi.Models;
+using AutoMapper;
 
 using ModeloDDD.Infra.CrossCutting.IoC;
 using ModeloDDD.Infra.Data;
@@ -30,6 +31,7 @@ namespace ModeloDDD.Api
 
             services.AddDbContext<SqlContext>(options => options.UseSqlServer(connection));
             services.AddControllers();
+            services.AddAutoMapper(typeof(Startup));
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_3_0);
             services.AddSwaggerGen(c =>
             {

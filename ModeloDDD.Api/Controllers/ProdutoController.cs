@@ -1,5 +1,4 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-
 using ModeloDDD.Application.DTO;
 using ModeloDDD.Application.Exceptions;
 using ModeloDDD.Application.Interfaces;

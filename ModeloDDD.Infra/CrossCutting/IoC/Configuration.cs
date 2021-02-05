@@ -2,8 +2,7 @@
 
 using ModeloDDD.Application;
 using ModeloDDD.Application.Interfaces;
-using ModeloDDD.Application.Interfaces.Mappers;
-using ModeloDDD.Application.Mappers;
+
 using ModeloDDD.Domain.Core.Interfaces.Repositories;
 using ModeloDDD.Domain.Core.Interfaces.Services;
 using ModeloDDD.Domain.Services;
@@ -23,8 +22,6 @@ namespace ModeloDDD.Infra.CrossCutting.IoC
             builder.RegisterType<RepositoryCliente>().As<IRepositoryCliente>();
             builder.RegisterType<RepositoryProduto>().As<IRepositoryProduto>();
             builder.RegisterType<RepositoryProduto>().As<IRepositoryProduto>();
-            builder.RegisterType<MapperCliente>().As<IMapperCliente>();
-            builder.RegisterType<MapperProduto>().As<IMapperProduto>();
 
             #endregion DI
         }

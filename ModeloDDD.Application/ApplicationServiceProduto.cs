@@ -1,9 +1,11 @@
-﻿using ModeloDDD.Application.DTO;
+﻿using AutoMapper;
+
+using ModeloDDD.Application.DTO;
+using ModeloDDD.Application.Exceptions;
+using ModeloDDD.Application.Extensions;
 using ModeloDDD.Application.Interfaces;
-using ModeloDDD.Application.Interfaces.Mappers;
 using ModeloDDD.Domain.Core.Interfaces.Services;
 using ModeloDDD.Domain.Entities;
-using ModeloDDD.Application.Exceptions;
 
 using System.Collections.Generic;
 
@@ -12,30 +14,38 @@ namespace ModeloDDD.Application
     public class ApplicationServiceProduto : IApplicationServiceProduto
     {
         private readonly IServiceProduto _serviceProduto;
-        private readonly IMapperProduto _mapperProduto;
+        private readonly IMapper _mapper;
 
-        public ApplicationServiceProduto(IServiceProduto serviceProduto, IMapperProduto imapperProduto)
+        public ApplicationServiceProduto(IServiceProduto serviceProduto, IMapper mapper)
         {
-            _mapperProduto = imapperProduto;
             _serviceProduto = serviceProduto;
+            _mapper = mapper;
         }
 
         public void Add(ProdutoDTO ProdutoDTO)
         {
-            Produto produto = _mapperProduto.MapperDtoToEntity(ProdutoDTO);
+            Produto produto = _mapper.Map<Produto>(ProdutoDTO);
             _serviceProduto.Add(produto);
         }
 
         public IEnumerable<ProdutoDTO> GetAll()
         {
             IEnumerable<Produto> produtos = _serviceProduto.GetAll();
-            return _mapperProduto.ListProdutoTODto(produtos);
+            IEnumerable<ProdutoDTO> produtosDTO = _mapper.Map<IEnumerable<ProdutoDTO>>(produtos);
+            produtosDTO.CalculaValorMaximoDeVenda();
+            return produtosDTO;
         }
 
         public ProdutoDTO GetById(int id)
         {
             Produto produto = _serviceProduto.GetById(id);
-            return _mapperProduto.MapperEntityToDto(produto);
+
+            if (produto is null)
+                throw new NotFoundException("Produto não encontrado");
+
+            ProdutoDTO produtoDTO = _mapper.Map<ProdutoDTO>(produto); ;
+            produtoDTO.CalculaValorMaximoDeVenda();
+            return produtoDTO;
         }
 
         public void Remove(int id)
@@ -50,7 +60,7 @@ namespace ModeloDDD.Application
 
         public void Update(ProdutoDTO ProdutoDTO)
         {
-            Produto produto = _mapperProduto.MapperDtoToEntity(ProdutoDTO);
+            Produto produto = _mapper.Map<Produto>(ProdutoDTO);
             _serviceProduto.Update(produto);
         }
     }
