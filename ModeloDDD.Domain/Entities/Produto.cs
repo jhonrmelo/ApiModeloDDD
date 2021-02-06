@@ -1,5 +1,8 @@
-﻿namespace ModeloDDD.Domain.Entities
+﻿using System.ComponentModel.DataAnnotations.Schema;
+
+namespace ModeloDDD.Domain.Entities
 {
+    [Table("Produto")]
     public class Produto : Base
     {
         public string Nome { get; set; }

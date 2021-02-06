@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace ModeloDDD.Domain.Entities
+﻿namespace ModeloDDD.Domain.Entities
 {
     public class Base
     {

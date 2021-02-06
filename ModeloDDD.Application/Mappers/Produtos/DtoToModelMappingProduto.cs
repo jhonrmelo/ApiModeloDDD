@@ -10,7 +10,7 @@ namespace ModeloDDD.Application.Mappers.Produtos
         public DtoToModelMappingProduto()
         {
             CreateMap<ProdutoDTO, Produto>()
-                .ForMember(dest => dest.Id, opt => opt.Ignore())
+                .ForMember(dest => dest.Id, opt => opt.MapFrom(x => x.Id))
                 .ForMember(dest => dest.Nome, opt => opt.MapFrom(x => x.Nome))
                 .ForMember(dest => dest.Quantidade, opt => opt.MapFrom(x => x.Quantidade))
                 .ForMember(dest => dest.IsDisponivel, opt => opt.Ignore())

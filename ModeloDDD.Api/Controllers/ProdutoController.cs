@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+
 using ModeloDDD.Application.DTO;
 using ModeloDDD.Application.Exceptions;
 using ModeloDDD.Application.Interfaces;
@@ -28,7 +29,21 @@ namespace ModeloDDD.Api.Controllers
         [HttpGet("{id}")]
         public IActionResult Get(int id)
         {
-            return Ok(_applicationServiceProduto.GetById(id));
+            try
+            {
+                if (id == 0)
+                    return BadRequest("Informação inválida");
+
+                return Ok(_applicationServiceProduto.GetById(id));
+            }
+            catch (NotFoundException ntEx)
+            {
+                return NotFound(ntEx.Message);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
         }
 
         [HttpPost]
@@ -74,7 +89,7 @@ namespace ModeloDDD.Api.Controllers
 
                 _applicationServiceProduto.Remove(id);
 
-                return Ok("Produot excluido com sucesso");
+                return Ok("Produot excluído com sucesso");
 
 
             }

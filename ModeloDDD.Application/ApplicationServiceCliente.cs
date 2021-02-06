@@ -36,6 +36,10 @@ namespace ModeloDDD.Application
         public ClienteDTO GetById(int id)
         {
             Cliente cliente = _serviceCliente.GetById(id);
+
+            if (cliente is null)
+                throw new NotFoundException("Cliente não encontrado");
+
             return _mapper.Map<ClienteDTO>(cliente);
         }
 

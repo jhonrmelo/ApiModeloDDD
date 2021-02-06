@@ -30,8 +30,23 @@ namespace ModeloDDD.Api.Controllers
         [HttpGet("{id}")]
         public ActionResult Get(int id)
         {
-            var cliente = _applicationServiceCliente.GetById(id);
-            return Ok(cliente);
+            try
+            {
+                if (id == 0)
+                    return BadRequest("Informação inválida");
+
+                var cliente = _applicationServiceCliente.GetById(id);
+                return Ok(cliente);
+            }
+            catch (NotFoundException ntEX)
+            {
+                return NotFound(ntEX.Message);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+
         }
 
         [HttpPost]
@@ -43,7 +58,7 @@ namespace ModeloDDD.Api.Controllers
                     return BadRequest("O cliente passado não é válido");
 
                 _applicationServiceCliente.Add(clienteDto);
-                return Ok("Cliente cadastrado com sucesso!");
+                return Ok("Cliente atualizado com sucesso!");
             }
             catch (Exception ex)
             {

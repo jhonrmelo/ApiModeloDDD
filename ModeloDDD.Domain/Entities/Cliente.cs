@@ -1,7 +1,9 @@
 ﻿using System;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace ModeloDDD.Domain.Entities
 {
+    [Table("Cliente")]
     public class Cliente : Base
     {
         public string Nome { get; set; }
